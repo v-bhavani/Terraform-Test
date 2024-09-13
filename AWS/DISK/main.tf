@@ -20,7 +20,3 @@ resource "aws_ebs_volume" "example_volume" {
     Name = var.tag  # Corrected to use var.tag instead of "var.tag"
   }
 }
-
-output "volume_id" {
-  value = aws_ebs_volume.example_volume.id
-}
