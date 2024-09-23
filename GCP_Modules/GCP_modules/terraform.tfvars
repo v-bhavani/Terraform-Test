@@ -4,11 +4,11 @@ snapshot_name         = "$snapshot"
 network_name         = "$network"
 subnet_name          = "$subnet"
 service_account_email = "$serviceaccount"
-tags =                   [$nwtag]
+tags =                   $nwtag
 
 vms = [
   {
-    name         = "$vmnam"
+    name         = "$vmname"
     machine_type = "$mechinetype"
     zone         = "$zone"
     disks = [
