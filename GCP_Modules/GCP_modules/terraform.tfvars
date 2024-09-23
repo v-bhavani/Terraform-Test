@@ -1,36 +1,36 @@
-project_id           = "mymigration-322809"
-region                = "us-central1"
-snapshot_name         = "ansiblegloden"
-network_name         = "default"
-subnet_name          = "default"
-service_account_email = "serviceacforiam@mymigration-322809.iam.gserviceaccount.com"
-tags =                   ["web", "production"]
+project_id           = "$project"
+region                = "$region"
+snapshot_name         = "$snapshot"
+network_name         = "$network"
+subnet_name          = "$subnet"
+service_account_email = "$serviceaccount"
+tags =                   [$nwtag]
 
 vms = [
   {
-    name         = "saprhelvm"
-    machine_type = "n1-standard-2"
-    zone         = "us-central1-a"
+    name         = "$vmnam"
+    machine_type = "$mechinetype"
+    zone         = "$zone"
     disks = [
       {
-        name    = "vm-1-usrsap"
-        size_gb = 32
+        name    = "$vm1disk1"
+        size_gb = $vm1disk1size
       },
      {
-        name    = "vm-1-hanashared"
-        size_gb = 16
+        name    = "$vm1disk2"
+        size_gb = $vm1disk2size
       },           
       {
-        name    = "vm-1-hanadata"
-        size_gb = 64
+        name    = "$vm1disk3"
+        size_gb = $vm1disk3size
       },
       {
-        name    = "vm-1-log"
-        size_gb = 16
+        name    = "$vm1disk4"
+        size_gb = $vm1disk4size
       },
        {
-        name    = "vm-1-softdump"
-        size_gb = 64
+        name    = "$vm1disk5"
+        size_gb = $vm1disk5size
       }
     ]
   }
