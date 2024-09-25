@@ -5,6 +5,7 @@ network_name         = "$network"
 subnet_name          = "$subnet"
 service_account_email = "$serviceaccount"
 tags =                   $nwtag
+disk_type =             "disktype"
 
 vms = [
   {
