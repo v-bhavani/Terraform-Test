@@ -25,5 +25,6 @@ module "vm_and_disk" {
   service_account_email = var.service_account_email
   tags                  = var.tags
   snapshot_image        = module.snapshot.image_id
+  disk_type             = var.disk_type
 }
 
