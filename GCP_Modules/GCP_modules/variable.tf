@@ -58,3 +58,8 @@ variable "tags" {
   description = "Tags to apply to the VMs"
   type        = list(string)
 }
+
+variable "disk_type" {
+  description = "The type of the disks to create. E.g., pd-standard, pd-ssd, pd-balanced."
+  type        = string
+}
