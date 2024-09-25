@@ -1,3 +1,4 @@
+# Data disk resource
 resource "google_compute_disk" "data_disk" {
   for_each = {
     for disk in flatten([
@@ -18,6 +19,7 @@ resource "google_compute_disk" "data_disk" {
   size = each.value.disk.size_gb
 }
 
+# VM instance resource with custom device names
 resource "google_compute_instance" "vm_instance" {
   for_each     = { for vm in var.vms : vm.name => vm }
   name         = each.value.name
@@ -42,7 +44,8 @@ resource "google_compute_instance" "vm_instance" {
   dynamic "attached_disk" {
     for_each = { for disk in each.value.disks : disk.name => disk }
     content {
-      source = google_compute_disk.data_disk["${each.value.name}-${attached_disk.key}"].self_link
+      source      = google_compute_disk.data_disk["${each.value.name}-${attached_disk.key}"].self_link
+      device_name = attached_disk.value.name  # Custom device name for the disk
     }
   }
 
