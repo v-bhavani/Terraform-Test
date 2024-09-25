@@ -40,3 +40,8 @@ variable "snapshot_image" {
   description = "The self_link of the snapshot image to use"
   type        = string
 }
+
+variable "disk_type" {
+  description = "The type of the disks to create. E.g., pd-standard, pd-ssd, pd-balanced."
+  type        = string
+}
