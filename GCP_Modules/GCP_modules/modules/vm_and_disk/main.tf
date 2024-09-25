@@ -14,7 +14,7 @@ resource "google_compute_disk" "data_disk" {
   }
 
   name = each.value.disk.name
-  type = "pd-standard"
+  type = var.disk_type
   zone = each.value.zone
   size = each.value.disk.size_gb
 }
