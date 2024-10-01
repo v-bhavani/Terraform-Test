@@ -5,7 +5,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "terraformbcs"  # Replace with your bucket name
+    bucket = "terraformbackline"  # Replace with your bucket name
     prefix = "terraform/state/modulesvm.tfstate"
   }
 }
