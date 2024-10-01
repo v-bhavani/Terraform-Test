@@ -1,37 +1,37 @@
-project_id           = "$project"
-region                = "$region"
-snapshot_name         = "$snapshot"
-network_name         = "$network"
-subnet_name          = "$subnet"
-service_account_email = "$serviceaccount"
-tags =                   $nwtag
+project_id           = "sapspecific"
+region                = "us-east1"
+snapshot_name         = "rhelosdisk"
+network_name         = "default"
+subnet_name          = "default"
+service_account_email = "1088675481439-compute@developer.gserviceaccount.com"
+tags =                  ["web","production"]
+disk_type =             "pd-balanced"
 
 vms = [
   {
-    name         = "$vmname"
-    machine_type = "$mechinetype"
-    zone         = "$zone"
+    name         = "sapbcsdemo"
+    machine_type = "e2-standard-8"
+    zone         = "us-east1-c"
     disks = [
       {
-        name    = "$vm1disk1"
-        size_gb = $vm1disk1size
+        name    = "vm-1-usrsap"
+        size_gb = 32
       },
      {
-        name    = "$vm1disk2"
-        size_gb = $vm1disk2size
-      },           
-      {
-        name    = "$vm1disk3"
-        size_gb = $vm1disk3size
+        name    = "vm-1-hanashared"
+        size_gb = 16
       },
       {
-        name    = "$vm1disk4"
-        size_gb = $vm1disk4size
+        name    = "vm-1-hanadata"
+        size_gb = 64
+      },
+      {
+        name    = "vm-1-log"
+        size_gb = 16
       },
        {
-        name    = "$vm1disk5"
-        size_gb = $vm1disk5size
+        name    = "vm-1-softdump"
+        size_gb = 64
       }
     ]
   }
-]
