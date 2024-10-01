@@ -1,6 +1,6 @@
 project_id           = "sapspecific"
 region               = "us-east1"
-snapshot_name        = "rhelosdisk"
+snapshot_name        = "suse-os-snap"
 network_name         = "default"
 subnet_name          = "default"
 service_account_email = "1088675481439-compute@developer.gserviceaccount.com"
