@@ -34,5 +34,16 @@ vms = [
         size_gb = 64
       }
     ]
+  },
+  {
+    name         = "sapbcsdemo1"
+    machine_type = "e2-standard-8"
+    zone         = "us-east1-c"
+    disks = [
+      {
+        name    = "vm-2-usrsap"
+        size_gb = 32
+      }
+    ]
   }
 ]
